@@ -20,6 +20,9 @@ Route::middleware('auth:api')->group(function(){
     Route::post('/contacts', [App\Http\Controllers\ContactsController::class, 'store']);
     Route::get('/contacts/{contact}', [App\Http\Controllers\ContactsController::class, 'show']);
     Route::patch('/contacts/{contact}', [App\Http\Controllers\ContactsController::class, 'update']);
-    Route::delete('/contacts/{contact}', [App\Http\Controllers\ContactsController::class, 'delete']);
+    Route::delete('/contacts/{contact}', [App\Http\Controllers\ContactsController::class, 'destroy']);
+
+    Route::get('/birthdays', [App\Http\Controllers\BirthdaysController::class, 'index']);
+    
 });
 

@@ -19,7 +19,7 @@ class Contact extends Model
     // This is so that we can deliver a path to the contact that is freshly created. Without this, the 'links'
     // array will not work in tests as well as in other places
     public function path(){
-        return url('contacts/'.$this->id);
+        return '/contacts/'.$this->id;
     }
 
     // this is a custom query scope that will be used inside the birthdays controller index method to find/search all birthdays.

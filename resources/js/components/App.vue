@@ -1,6 +1,7 @@
 <template>
   <div class="h-screen bg-white">
     <div class="flex">
+        <!-- Sidebar -->
         <div class="bg-gray-200 w-48 h-screen border-r-2 border-gray-400">
             <nav>
                 <router-link to="/">                
@@ -9,29 +10,117 @@
                     </svg>
                 </router-link>
 
-                <p class="pl-2 pt-12 text-xs text-gray-500 uppercase font-bold"> Create </p>
-                <router-link to="/" class="pl-2 flex items-center py-2 hover:text-blue-600" active-class="bg-blue-200">
+                <p class="pl-2 pt-12 pb-1 text-xs text-gray-500 uppercase font-bold"> Create </p>
+                <router-link to="/contacts/create" class="pl-2 flex items-center py-2 hover:text-blue-600" exact-active-class="bg-blue-200">
                     <svg viewBox="0 0 24 24" class="fill-current text-blue-600 w-5 h-5"><path d="M23.3 11.9c0 .9-.6 1.4-1.4 1.4h-8.5v8.5c0 .9-.6 1.4-1.4 1.4s-1.4-.6-1.4-1.4v-8.5H2c-.9 0-1.4-.6-1.4-1.4 0-.9.6-1.4 1.4-1.4h8.5V1.9c0-.9.6-1.4 1.4-1.4s1.4.6 1.4 1.4v8.5h8.5c.9 0 1.5.6 1.5 1.5z"/></svg>
-                    <div class="pl-3 tracking-wide"> Add New </div>
+                    <div class="pl-3 tracking-wide text-sm font-medium"> Add New </div>
                 </router-link>                
                 
-                <p class="pt-12 text-xs text-gray-500 uppercase font-bold"> General </p>
-                <p class="pt-12 text-xs text-gray-500 uppercase font-bold"> Settings </p>
+                <p class="pl-2 pt-12 pb-1 text-xs text-gray-500 uppercase font-bold"> General </p>
+                <router-link to="/contacts" class="pl-2 flex items-center py-2 hover:text-blue-600" exact-active-class="bg-blue-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-current text-blue-600 w-5 h-5"><path class="st0" d="M20 2h-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1h-4V1c0-.6-.4-1-1-1s-1 .4-1 1v1H7V1c0-.6-.4-1-1-1S5 .4 5 1v1H4C1.8 2 0 3.8 0 6v14c0 2.2 1.8 4 4 4h16c2.2 0 4-1.8 4-4V6c0-2.2-1.8-4-4-4zM4 4h1v1c0 .6.4 1 1 1s1-.4 1-1V4h4v1c0 .6.4 1 1 1s1-.4 1-1V4h4v1c0 .6.4 1 1 1s1-.4 1-1V4h1c1.1 0 2 .9 2 2v2H2V6c0-1.1.9-2 2-2zm16 18H4c-1.1 0-2-.9-2-2V10h20v10c0 1.1-.9 2-2 2zM8 14c0 .6-.4 1-1 1H5c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1zm6 0c0 .6-.4 1-1 1h-2c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1zm6 0c0 .6-.4 1-1 1h-2c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1zM8 18c0 .6-.4 1-1 1H5c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1zm6 0c0 .6-.4 1-1 1h-2c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1zm6 0c0 .6-.4 1-1 1h-2c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1z"/></svg>
+                    <div class="pl-3 tracking-wide text-sm font-medium"> Contacts </div>
+                </router-link>                
+                <router-link to="/birthdays" class="pl-2 flex items-center py-2 hover:text-blue-600" exact-active-class="bg-blue-200">
+                    <svg viewBox="0 0 24 24" class="fill-current text-blue-600 w-5 h-5"><path fill-rule="evenodd" d="M12.1 6.8c1.2 0 2.1-1 2.1-2.1 0-.4-.1-.8-.3-1.1L12.1.5l-1.8 3.1c-.2.3-.3.6-.3 1 0 1.2 1 2.2 2.1 2.2zm6.4 3.1h-5.3V7.8h-2.1v2.1H5.8c-1.8 0-3.2 1.4-3.2 3.2v9.5c0 .6.5 1.1 1.1 1.1h16.9c.6 0 1.1-.5 1.1-1.1v-9.5c0-1.8-1.5-3.2-3.2-3.2zm1 11.7H4.7v-3.2c1 0 1.9-.4 2.5-1.1l1.2-1.1 1.1 1.1c1.4 1.4 3.8 1.4 5.2 0l1.1-1.1 1.1 1.1c.7.7 1.6 1.1 2.5 1.1v3.2h.1zm0-4.8c-.5 0-1-.2-1.4-.6l-2.3-2.3-2.3 2.3c-.8.8-2.1.8-2.9 0l-2.3-2.3L6 16.2c-.4.4-.9.6-1.4.6v-3.7c0-.6.5-1.1 1.1-1.1h12.7c.6 0 1.1.5 1.1 1.1v3.7z" clip-rule="evenodd"/></svg>
+                    <div class="pl-3 tracking-wide text-sm font-medium"> Birthdays </div>
+                </router-link>                
+
+                <p class="pl-2 pt-12 pb-1 text-xs text-gray-500 uppercase font-bold"> Settings </p>
+                <router-link to="/logout" class="pl-2 flex items-center py-2 hover:text-blue-600" exact-active-class="bg-blue-200">
+                    <svg viewBox="0 0 24 24" class="fill-current text-blue-600 w-5 h-5"><path d="M21 3h-3.8c-.7 0-1.3-.6-1.3-1.3S16.5.4 17.2.4h5.1c.7 0 1.3.6 1.3 1.3v20.5c0 .7-.6 1.3-1.3 1.3h-5.1c-.7 0-1.3-.6-1.3-1.3 0-.7.6-1.3 1.3-1.3H21V3zm-6.9 7.7L8.6 5.2c-.5-.5-.6-1.3-.1-1.8s1.3-.5 1.8 0l7.7 7.7c.8.8.2 2.2-.9 2.2H1.8c-.7 0-1.3-.6-1.3-1.3 0-.7.6-1.3 1.3-1.3h12.3zm-1.6 4.8c.5-.5 1.3-.4 1.8.1s.4 1.3-.1 1.8l-3.8 3.2c-.5.5-1.3.4-1.8-.1-.6-.5-.5-1.3 0-1.7l3.9-3.3z"/></svg>
+                    <div class="pl-3 tracking-wide text-sm font-medium"> Logout </div>
+                </router-link>                
             </nav>
         </div>
-        <div>
-            <div></div>
-            <div>
+        <!-- Sidebar End-->
+
+        <!-- Navbar and main content -->
+        <div class="flex flex-col flex-1 h-screen overflow-y-hidden">
+            <!-- Navbar -->
+            <div class="h-16 px-6 border-b border-gray-400 flex items-center justify-between">
+                <div>
+                    {{ title }}
+                </div>   
+                <!-- To center text horizontally AND vertically, use flex, justify-center and items-center TOGETHER -->
+                <UserCircle :name="user.name" />                                    
             </div>
+            <!-- End Navbar -->
+            <!-- Main content section -->               
+
+            <div class="p-6 flex flex-col overflow-auto flex-1">
+              <router-view class=""></router-view>            
+            </div>
+
+            <!-- End Main content section -->
+        <!-- End Navbar and main content -->
         </div>
-    </div>      
+    </div>              
   </div>
 </template>
+  
 
 <script>
-export default {
+  import UserCircle from './UserCircle';
+  export default {
+      props:[
+          'user'
+      ],
 
-}
+      data(){
+        return{
+          // title that comes from router file as meta data
+          title: '',
+        }
+      },
+
+      methods: {
+
+      },
+
+      components: {
+        UserCircle,
+      },
+
+      created() {      
+        //Set title variable to this page's title(from meta data of current URL) which will on change be watched by watcher below         
+          this.title = this.$route.meta.title;
+
+          // appending api_token so it becomes available to every component that is loaded in the App.vue file
+          window.axios.interceptors.request.use(
+            (config) => {
+              // if the request type sent is of type "get", append the api_token with the URL
+              if(config.method === 'get'){          
+                config.url = config.url + '?api_token=' + this.user.api_token;
+              }
+              // else(i.e the request is show, create, delete etc.) append the api_token as an array field
+              // on the request object sent to the backend
+              else{
+                config.data = {
+                  ...config.data, 
+                  api_token: this.user.api_token
+      
+                };
+              }
+
+              return config;
+            }
+          )
+      },
+
+      watch: {
+        // watcher function applied on the route itself. It grabs the "to" and "from" routes(the routes contains meta data as well).
+        $route: function(to, from){
+          // title variable(in data) is set equal to the title(from router.js) carried by meta data from "to" route
+          this.title = to.meta.title;
+        },
+
+        title: function(){
+          // if title changes, set the document.title equal to the title variable(which was set to title from route meta data)
+          document.title = this.title + ' | Jot - The SPA App';        
+        }
+      }
+  }
 </script>
 
 <style>

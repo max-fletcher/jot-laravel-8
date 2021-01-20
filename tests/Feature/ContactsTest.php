@@ -327,7 +327,7 @@ class ContactsTest extends TestCase
         $response->assertStatus(Response::HTTP_NO_CONTENT);
     }
 
-    // DELETE (TESTING IF 1 USER CAN EDIT ANOTHER USER'S CONTACTS)
+    // DELETE (TESTING IF 1 USER CAN DELETE ANOTHER USER'S CONTACTS)
     public function test_only_the_owner_can_delete_a_contact(){
 
         // a new user other than $user
